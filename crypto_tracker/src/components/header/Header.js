@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import coinMarket from '../../assests/coinmarketcap.svg';
 import {BsSearch} from 'react-icons/bs';
+import MiniHeader from '../MiniHeader/MiniHeader';
 
 export const HeaderWrapper = styled.div`
   width: 100%;
@@ -16,7 +17,7 @@ export const HeaderWrapper = styled.div`
 export const Nav = styled.nav`
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 14px;
+  font-size: 18px;
 `
 export const HeaderLogo = styled.div`
   height: 30px;
@@ -27,7 +28,6 @@ export const HeaderLogoContainer = styled.div`
   width: 250px;
   height: 30px;
   display: inline-block;
-  background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
 `
@@ -38,6 +38,7 @@ export const Search = styled.div`
 function Header() {
   return (
     <Nav>
+      <MiniHeader />
       <HeaderWrapper>
         <HeaderLogo>
           <HeaderLogoContainer />
