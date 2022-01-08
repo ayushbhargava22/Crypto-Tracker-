@@ -50,7 +50,6 @@ function MiniHeader() {
   },[])
 
   const CryptoData = cryptos.latestCryptoInfo.cryptoInfo;
-  console.log(CryptoData);
   return (
     <MiniHeaderWrapper>
       <MiniHeaderContainer>
