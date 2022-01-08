@@ -11,8 +11,6 @@ export const HeaderWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 15px;
-  margin-right: auto;
-  margin-left: auto;
 `
 export const Nav = styled.nav`
   background-color: rgb(255, 255, 255);
