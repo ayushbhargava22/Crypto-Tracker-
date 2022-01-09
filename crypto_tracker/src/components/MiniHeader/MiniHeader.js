@@ -38,7 +38,7 @@ function MiniHeader() {
 
   const fetchCrypto = async () => {
     const response = await axios
-    .get("/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=74b733ae-955d-4d33-86da-863819ac408d")
+    .get("https://api.coingecko.com/api/v3/global")
     .catch((err) => {
       console.log("Error", err);
     })
@@ -53,9 +53,9 @@ function MiniHeader() {
   return (
     <MiniHeaderWrapper>
       <MiniHeaderContainer>
-        <CryptoInformation>Cryptos: <DynamicData>{CryptoData.total_cryptocurrencies}</DynamicData></CryptoInformation>
-        <CryptoInformation>Exchanges: <DynamicData>{CryptoData.active_exchanges}</DynamicData></CryptoInformation>
-        <CryptoInformation>Dominance: <DynamicData>BTC:{CryptoData.btc_dominance} ETH:{CryptoData.eth_dominance}</DynamicData></CryptoInformation>
+        <CryptoInformation>Cryptos: <DynamicData>{CryptoData.active_cryptocurrencies}</DynamicData></CryptoInformation>
+        <CryptoInformation>Exchanges: <DynamicData>{CryptoData.markets}</DynamicData></CryptoInformation>
+        <CryptoInformation>OnGoing ICOS: <DynamicData>{CryptoData.ongoing_icos}</DynamicData></CryptoInformation>
       </MiniHeaderContainer>
     </MiniHeaderWrapper>
   )
