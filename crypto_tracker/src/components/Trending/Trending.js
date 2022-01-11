@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import { trendingCrypto } from '../../actions/TrendingCrypto';
 import styled from 'styled-components';
 import TrendingIcon from '../../assests/TrendingIcon.png';
+import {MdKeyboardArrowRight} from 'react-icons/md';
 
 export const TrendingWrapper = styled.div`
   padding: 15px;
@@ -66,6 +67,20 @@ export const Symbol = styled.p`
   padding-left: 10px;
   margin: 0px
 `
+export const Button = styled.button`
+  border: none;
+  color: rgb(56, 97, 251);
+  font-size: 15px;
+  font-weight: normal;
+  padding: 0px;
+  padding-left: 10px;
+  margin: 0px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 10px;
+`
 
 export default function Trending() {
   const trending = useSelector((state) => {return state})
@@ -88,7 +103,7 @@ export default function Trending() {
   return (
     <TrendingWrapper>
       <TrendingContainer>
-        <TrendingHeading>Today's Cryptocurrency Prices by Market Cap</TrendingHeading>
+        <TrendingHeading>Todays Cryptocurrency Prices by Market Cap</TrendingHeading>
         <Box>
           <TrendingBox>
             <Heading><Image src={TrendingIcon}></Image>Trending</Heading>
@@ -103,7 +118,7 @@ export default function Trending() {
                   </DataWrapper>
                 )
               })}
-              <Symbol>See More</Symbol>
+              <Button>See More <MdKeyboardArrowRight /></Button>
             </DataContainer>
           </TrendingBox>
         </Box>
